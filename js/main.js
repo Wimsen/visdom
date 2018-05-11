@@ -779,7 +779,7 @@ class App extends React.Component {
             onChange={(ev) => {this.setState({modifyID: ev.target.value})}}
             value={this.state.modifyID}>
             {
-              this.state.envList.map((env) => {
+              this.state.envList.sort().map((env) => {
                 return <option key={env} value={env}>{env}</option>;
               })
             }
